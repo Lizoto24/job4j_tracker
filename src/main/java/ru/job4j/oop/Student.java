@@ -13,6 +13,7 @@ public class Student {
         petya.music();
         petya.music();
         petya.music();
+
         petya.sing();
         petya.sing();
         petya.sing();
