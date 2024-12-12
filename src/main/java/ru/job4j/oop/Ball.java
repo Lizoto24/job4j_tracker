@@ -33,8 +33,8 @@ public class Ball {
     class BallStory {
         public static void main(String[] args) {
             Ball kolobok = new Ball ();
-            Hare kurochka = new Hare ();
-            kurochka.tryEat(kolobok);
+            Hare zayts = new Hare ();
+            zayts.tryEat(kolobok);
             Fox lisichka = new Fox ();
             lisichka.tryEat (kolobok);
             Wolf volk = new Wolf ();
