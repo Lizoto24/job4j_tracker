@@ -12,7 +12,7 @@ class Engineer extends Profession {
     private int experience;
 
     public Engineer(int experience, boolean degree) {
-        super (degree);
+        super(degree);
         this.experience = experience;
     }
 }
@@ -21,7 +21,7 @@ class Engineer extends Profession {
     private String programLanguage;
 
     public Programmer(String programLanguage, int experience, boolean degree) {
-        super (experience,degree);
+        super(experience,degree);
         this.programLanguage = programLanguage;
     }
 }
