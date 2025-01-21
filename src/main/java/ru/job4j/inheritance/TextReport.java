@@ -7,6 +7,7 @@ public class TextReport {
 }
 
 class HtmlReport extends TextReport {
+    @Override
     public String generate(String name, String body) {
         return "<h1>" + name + "</h1>"
                 + "<br/>"
@@ -15,6 +16,7 @@ class HtmlReport extends TextReport {
 }
 
 class JSONReport extends TextReport {
+    @Override
     public String generate(String name, String body) {
         return "{" + System.lineSeparator() +
                 "\t\"name\" : \"" + name + "\"," + System.lineSeparator()
