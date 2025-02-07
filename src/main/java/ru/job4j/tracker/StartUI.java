@@ -10,6 +10,8 @@ public class StartUI {
         LocalDateTime currentDateTimeFormat = item.getCreated();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
         System.out.println("Текущие дата и время после форматирования: " + currentDateTimeFormat.format(formatter));
+        Item item1 = new Item (987, "Cat");
+        System.out.println(item1);
     }
     }
 
