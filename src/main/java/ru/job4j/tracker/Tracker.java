@@ -25,9 +25,6 @@ public class Tracker {
             }
         }
         result = Arrays.copyOf(result, size);
-        for (int index = 0; index < result.length; index++) {
-            System.out.println(result[index]);
-        }
         return result;
     }
 

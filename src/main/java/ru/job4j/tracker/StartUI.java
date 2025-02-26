@@ -46,6 +46,19 @@ public class StartUI {
                 }
             }
 
+            else if (select == 3) {
+                System.out.println("=== Удаление заявки ===");
+                System.out.print("Введите id: ");
+                int id = Integer.parseInt(scanner.nextLine());
+                Item item = tracker.findById(id);
+                tracker.delete(id);
+                if (item!= null) {
+                    System.out.println("Заявка удалена успешно.");
+                } else {
+                    System.out.println("Ошибка удаления заявки.");
+                }
+            }
+
             else if (select == 6) {
                 run = false;
             }
