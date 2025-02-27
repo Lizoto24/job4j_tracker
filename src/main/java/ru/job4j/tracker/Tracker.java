@@ -29,29 +29,22 @@ public class Tracker {
     }
 
     public Item[] findByName(String key) {
-        Item[] result = new Item[items.length];
-        int size = 0;
-        for (int index = 0; index < items.length; index++) {
+        Item[] result = new Item[size];
+        int count = 0;
+        for (int index = 0; index < size; index++) {
             Item item = items[index];
             if (Objects.equals(item.getName(), key)) {
-                result [size] = item;
-                size++;
+                result [count] = item;
+               count++;
             }
         }
-        result = Arrays.copyOf(result, size);
+        result = Arrays.copyOf(result, count);
         return result;
     }
 
     public Item findById(int id) {
-        Item rsl = null;
-        for (int index = 0; index < size; index++) {
-            Item item = items[index];
-            if (item.getId() == id) {
-                rsl = item;
-                break;
-            }
-        }
-        return rsl;
+        int index = indexOf(id);
+        return index != -1 ? items[index] : null;
     }
 
     public boolean replace(int id, Item item) {
@@ -60,7 +53,6 @@ public class Tracker {
         if (result) {
             item.setId(id);
             items [index] = item;
-
         }
         return result;
     }
