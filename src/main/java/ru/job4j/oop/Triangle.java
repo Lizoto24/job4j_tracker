@@ -69,6 +69,9 @@ class Point {
       Point b = new Point(45,278,721);
       double distanceResult = a.distance3d(b);
       System.out.println(distanceResult);
+      a.info();
+      b.info();
+
      }
 }
 
