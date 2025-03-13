@@ -1,28 +1,27 @@
 package ru.job4j.tracker;
 
-public class FindByIdAction implements UserAction {
+public class DeleteAction implements UserAction {
     private final Output output;
 
-    public FindByIdAction (Output output) {
+    public DeleteAction(Output output) {
         this.output = output;
     }
 
     @Override
     public String name() {
-        return "Показать заявку по id";
+        return "Удалить заявку";
     }
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        output.println("=== Вывод заявки по id ===");
+        output.println("=== Удаление заявки ===");
         int id =  input.askInt("Введите id: ");
         Item item = tracker.findById(id);
+        tracker.delete(id);
         if (item!= null) {
-            output.println(item);
+            output.println("Заявка удалена успешно.");
         } else {
-            output.println("Заявка с введенным id: " + id + " не найдена.");
+            output.println("Ошибка удаления заявки.");
         }
         return true;
     }
-
 }
-
