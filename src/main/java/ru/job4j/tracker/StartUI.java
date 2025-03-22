@@ -8,7 +8,6 @@ import ru.job4j.tracker.output.Output;
 
 public class StartUI {
     private final Output output;
-
     public StartUI(Output output) {
         this.output = output;
     }
@@ -22,7 +21,6 @@ public class StartUI {
         run = action.execute(input, tracker);
     }
 }
-
     private void showMenu(UserAction[] actions) {
         output.println ("Меню:");
         for (int index = 0; index < actions.length; index++) {

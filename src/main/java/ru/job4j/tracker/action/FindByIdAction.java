@@ -7,7 +7,6 @@ import ru.job4j.tracker.Tracker;
 
 public class FindByIdAction implements UserAction {
     private final Output output;
-
     public FindByIdAction (Output output) {
         this.output = output;
     }
@@ -16,6 +15,7 @@ public class FindByIdAction implements UserAction {
     public String name() {
         return "Показать заявку по id";
     }
+
     @Override
     public boolean execute(Input input, Tracker tracker) {
         output.println("=== Вывод заявки по id ===");

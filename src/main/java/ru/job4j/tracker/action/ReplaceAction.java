@@ -7,14 +7,15 @@ import ru.job4j.tracker.Tracker;
 
 public class ReplaceAction implements UserAction {
     private final Output output;
-
     public ReplaceAction (Output output) {
         this.output = output;
     }
+
     @Override
     public String name() {
         return "Изменить заявку";
     }
+
     @Override
     public boolean execute(Input input, Tracker tracker) {
         output.println ("=== Редактирование заявки ===");

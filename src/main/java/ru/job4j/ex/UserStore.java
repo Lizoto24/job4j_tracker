@@ -8,10 +8,8 @@ public class UserStore {
             if (Objects.equals(users[index].getUsername(), login)) {
                 return users[index];
             }
-
         }
         throw new UserNotFoundException("This user was not found");
-
     }
 
     public static boolean validate(User user) throws UserInvalidException {

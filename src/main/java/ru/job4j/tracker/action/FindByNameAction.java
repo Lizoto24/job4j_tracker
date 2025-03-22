@@ -7,14 +7,15 @@ import ru.job4j.tracker.Tracker;
 
 public class FindByNameAction implements UserAction {
     private final Output output;
-
     public FindByNameAction(Output output) {
         this.output = output;
     }
+
     @Override
     public String name() {
         return "Показать заявки по имени";
     }
+
     @Override
     public boolean execute(Input input, Tracker tracker) {
         output.println("=== Вывод заявки по имени ===");

@@ -7,7 +7,6 @@ import ru.job4j.tracker.Tracker;
 
 public class FindAllAction implements UserAction {
     private final Output output;
-
     public FindAllAction(Output output) {
         this.output = output;
     }
@@ -16,6 +15,7 @@ public class FindAllAction implements UserAction {
         public String name () {
             return "Показать все заявки";
         }
+
         @Override
         public boolean execute (Input input, Tracker tracker){
             output.println("=== Вывод всех заявок ===");

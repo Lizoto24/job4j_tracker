@@ -7,13 +7,12 @@ import ru.job4j.tracker.Tracker;
 
 public class CreateAction implements UserAction {
     private final Output output;
-
     public CreateAction(Output output) {
         this.output = output;
     }
-        @Override
-        public String name() {
-            return "Добавить новую заявку";
+
+     @Override
+        public String name() {return "Добавить новую заявку";
         }
 
         @Override
