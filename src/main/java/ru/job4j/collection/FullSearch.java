@@ -6,9 +6,9 @@ import java.util.Set;
 
 public class FullSearch {
     public Set<String> extractNumber(List<Task> tasks) {
-        HashSet <String> numbers = new HashSet<>();
-        for (Task value: tasks) {
-        numbers.add(value.getNumber());
+        Set <String> numbers = new HashSet<>();
+        for (Task value : tasks) {
+            numbers.add(value.getNumber());
         }
         return numbers;
     }
