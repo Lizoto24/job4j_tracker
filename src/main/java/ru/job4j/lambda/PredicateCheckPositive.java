@@ -5,7 +5,7 @@ import java.util.function.Predicate;
 public class PredicateCheckPositive {
 
     public static boolean check(int num) {
-        return check(n -> num > 0, num);
+        return check(n -> n > 0, num);
 
     }
 
