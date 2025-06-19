@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class EmployeeTest {
-    public static void NamesOver30(List<Map<String, String>> list) {
+    public static void namesOver30(List<Map<String, String>> list) {
         for (Map<String, String> row : list) {
             String age = row.get("Возраст");
             Integer i = Integer.valueOf(age);
@@ -17,7 +17,7 @@ public class EmployeeTest {
         }
     }
 
-    public static void NamesWithSalaryInRubles(List<Map<String, String>> list) {
+    public static void namesWithSalaryInRubles(List<Map<String, String>> list) {
         for (Map<String, String> row : list) {
             String salary = row.get("Зарплата");
             if (salary.endsWith("руб")) {
@@ -27,7 +27,7 @@ public class EmployeeTest {
         }
     }
 
-    public static void AverageAge(List<Map<String, String>> list) {
+    public static void averageAge(List<Map<String, String>> list) {
         int sum = 0;
         int count = list.size();
         for (Map<String, String> row : list) {
@@ -71,9 +71,9 @@ public class EmployeeTest {
         list.add(row3);
         list.add(row4);
 
-        NamesOver30(list);
-        NamesWithSalaryInRubles(list);
-        AverageAge(list);
+        namesOver30(list);
+        namesWithSalaryInRubles(list);
+        averageAge(list);
     }
 }
 
