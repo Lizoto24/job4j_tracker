@@ -3,7 +3,7 @@ package ru.job4j.stream;
 import java.util.*;
 
 public class EmployeeFilter {
-    public static void NamesOver30(List<Map<String, String>> list) {
+    public static void namesOver30(List<Map<String, String>> list) {
         list.stream()
                 .filter(row -> {
                     Integer i = Integer.valueOf(row.get("Возраст"));
@@ -13,14 +13,14 @@ public class EmployeeFilter {
                 .forEach(name -> System.out.println(name));
     }
 
-    public static void NamesWithSalaryInRubles(List<Map<String, String>> list) {
+    public static void namesWithSalaryInRubles(List<Map<String, String>> list) {
         list.stream()
                 .filter(row -> row.get("Зарплата").endsWith("руб"))
                 .map(row -> row.get("Имя"))
                 .forEach(name -> System.out.println(name));
     }
 
-    public static void AverageAge(List<Map<String, String>> list) {
+    public static void averageAge(List<Map<String, String>> list) {
         double result = list.stream()
                 .mapToInt(row -> Integer.valueOf(row.get("Возраст")))
                 .average()
@@ -60,9 +60,9 @@ public class EmployeeFilter {
         list.add(row3);
         list.add(row4);
 
-        NamesOver30(list);
-        NamesWithSalaryInRubles(list);
-        AverageAge(list);
+        namesOver30(list);
+        namesWithSalaryInRubles(list);
+       averageAge(list);
     }
 }
 
