@@ -28,14 +28,14 @@ public class EmployeeTest {
     }
 
     public static void averageAge(List<Map<String, String>> list) {
-        int sum = 0;
+        double sum = 0.0;
         int count = list.size();
         for (Map<String, String> row : list) {
             String age = row.get("Возраст");
             Integer i = Integer.parseInt(age);
             sum += i;
         }
-        double average = (double) sum/count;
+        double average = sum/count;
         System.out.println(average);
     }
 
