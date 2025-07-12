@@ -7,7 +7,7 @@ public class Book {
     private float rating;
     private int reviews;
 
-    public Book (String title, float rating, int reviews) {
+    public Book(String title, float rating, int reviews) {
         this.title = title;
         this.rating = rating;
         this.reviews = reviews;
@@ -30,11 +30,16 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return Float.compare(rating, book.rating) == 0 && reviews == book.reviews && Objects.equals(title, book.title);
+        return Objects.equals(title, book.title);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, rating, reviews);
+        return Objects.hashCode(title);
     }
 }
+
+
+
+
+
