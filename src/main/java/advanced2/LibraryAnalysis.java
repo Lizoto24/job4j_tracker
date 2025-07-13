@@ -9,7 +9,7 @@ public class LibraryAnalysis {
     public static void main(String[] args) {
         List<Library> libraries = List.of(
                 new Library("Central", List.of(
-                        new Book("Java Basics", List.of("Alice")),
+                        new Book("Java Basics", List.of("Kate")),
                         new Book("Advanced Java", List.of("Alice", "Bob")),
                         new Book("Spring in action", List.of("Charlie", "Lisa"))
                 )),
