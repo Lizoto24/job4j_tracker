@@ -6,13 +6,13 @@ public class MatrixFiller {
 
         for (int n : sizes) {
             System.out.println("Матрица " + n + "x" + n + ":");
-            int[][] matrix = buildMatrix(n);
+            int[][] matrix = fillMatrix(n);
             printMatrix(matrix);               
             System.out.println();
         }
     }
 
-    public static int[][] buildMatrix(int n) {
+    public static int[][] fillMatrix(int n) {
         int[][] matrix = new int[n][n];
         int numberOfLayers = n / 2;
 
