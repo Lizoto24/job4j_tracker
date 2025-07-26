@@ -7,8 +7,13 @@ public class MinElementDiagonal {
                 {5, 7, 9, 2, 1},
                 {0, 9, 1, 8, 7},
                 {6, 3, 6, 6, 6},
-                {99, 100, -2, 3, 3}
+                {99, 100, -2, 3, 1}
         };
+        int result = findMinElementDiagonal(matrix);
+        System.out.println(result);
+    }
+
+    public static int findMinElementDiagonal(int[][] matrix) {
         int n = matrix.length;
         int min = matrix[0][n - 1];
         int j = 0;
@@ -24,8 +29,7 @@ public class MinElementDiagonal {
             }
             j++;
         }
-        System.out.println(min);
+        return min;
     }
-
 }
 
