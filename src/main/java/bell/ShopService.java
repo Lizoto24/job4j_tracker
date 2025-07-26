@@ -10,7 +10,7 @@ public class ShopService implements Basket {
 
     @Override
     public void addProduct(String product, int quantity) {
-        map.putIfAbsent(product,quantity);
+        map.putIfAbsent(product, quantity);
     }
 
     @Override
@@ -20,7 +20,7 @@ public class ShopService implements Basket {
 
     @Override
     public void updateProductQuantity(String product, int quantity) {
-        map.put(product,quantity);
+        map.put(product, quantity);
     }
 
     @Override
